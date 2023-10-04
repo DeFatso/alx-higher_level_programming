@@ -8,4 +8,8 @@ def fizzbuzz():
         elif num % 5 == 0:
             print("Buzz", end=" ")
         else:
-            print(num, end=" ")3
+            print(num, end=" ")
+
+if __name__ == "__main__":
+    fizzbuzz()
+    print()
