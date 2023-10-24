@@ -1,4 +1,3 @@
-guillaume@ubuntu:~/0x06$ cat 2-main.py
 #!/usr/bin/python3
 Square = __import__('2-square').Square
 
