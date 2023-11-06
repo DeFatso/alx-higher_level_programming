@@ -3,8 +3,9 @@
 """
 module with method BaseGeometry
 """
+
+
 class BaseGeometry:
     """ empty class"""
-
 
     pass
