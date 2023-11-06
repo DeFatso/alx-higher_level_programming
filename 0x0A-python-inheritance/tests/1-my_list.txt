@@ -1,4 +1,9 @@
->>> __import__('1-my_list').MyList
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list = MyList()
+>>> isinstance(my_list, list)
+True
+
+
 >>> my_list.append(1)
 >>> my_list.append(4)
 >>> my_list.append(2)
