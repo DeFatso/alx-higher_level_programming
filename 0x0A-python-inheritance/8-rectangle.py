@@ -5,6 +5,8 @@ contains Rectangle class
 
 
 class BaseGeometry:
+    """ base class """
+
     def area(self):
         raise Exception("area() is not implemented")
 
@@ -16,6 +18,8 @@ class BaseGeometry:
 
 
 class Rectangle(BaseGeometry):
+    """ rectanle class """
+
     def __init__(self, width, height):
         self.__width = 0
         self.__height = 0
