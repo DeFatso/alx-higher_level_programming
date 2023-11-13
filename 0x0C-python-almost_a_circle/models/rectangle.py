@@ -38,36 +38,36 @@ class Rectangle(Base):
 
     @property
     def height(self):
-         """ width getter """
+        """ width getter """
         return self.__height
 
     @height.setter
     def height(self, value):
-         """ width getter """
+        """ width getter """
         self.validate_integer(value, "height")
         self.validate_positive(value, "height")
         self.__height = value
 
     @property
     def x(self):
-         """ width getter """
+        """ width getter """
         return self.__x
 
     @x.setter
     def x(self, value):
-         """ width getter """
+        """ width getter """
         self.validate_integer(value, "x")
         self.validate_non_negative(value, "x")
         self.__x = value
 
     @property
     def y(self):
-         """ width getter """
+        """ width getter """
         return self.__y
 
     @y.setter
     def y(self, value):
-         """ width getter """
+        """ width getter """
         self.validate_integer(value, "y")
         self.validate_non_negative(value, "y")
         self.__y = value
@@ -124,7 +124,6 @@ class Rectangle(Base):
         3rd argument should be the height attribute
         4th argument should be the x attribute
         5th argument should be the y attribute
-        **kwargs can be thought of as a double pointer to a dictionary: key/value (keyworded arguments)
         **kwargs must be skipped if *args exists and is not empty
         Each key in this dictionary represents an attribute to the instance
         """
@@ -146,4 +145,5 @@ class Rectangle(Base):
         Returns:
         - str: A string representation of the rectangle.
         """
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+        return (f"[Rectangle] ({self.id}) {self.x}/{self.y} - "
+                f"{self.width}/{self.height}")

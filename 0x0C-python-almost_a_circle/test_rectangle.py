@@ -60,11 +60,5 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(rectangle.area(), 500000)
 
 
-    def test_display_with_position(self):
-        # Test if the display method prints the rectangle with correct position
-        rectangle = Rectangle(3, 2, 2, 1)
-        self.assertEqual(rectangle, "  ###\n  ###\n")
-
-
 if __name__ == '__main__':
     unittest.main()
