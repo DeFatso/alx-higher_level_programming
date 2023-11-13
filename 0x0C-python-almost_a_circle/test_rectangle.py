@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import io
 from unittest.mock import patch
 import unittest
