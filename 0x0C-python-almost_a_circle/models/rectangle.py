@@ -26,40 +26,48 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """ with setter """
         return self.__width
 
     @width.setter
     def width(self, value):
+        """ width getter """
         self.validate_integer(value, "width")
         self.validate_positive(value, "width")
         self.__width = value
 
     @property
     def height(self):
+         """ width getter """
         return self.__height
 
     @height.setter
     def height(self, value):
+         """ width getter """
         self.validate_integer(value, "height")
         self.validate_positive(value, "height")
         self.__height = value
 
     @property
     def x(self):
+         """ width getter """
         return self.__x
 
     @x.setter
     def x(self, value):
+         """ width getter """
         self.validate_integer(value, "x")
         self.validate_non_negative(value, "x")
         self.__x = value
 
     @property
     def y(self):
+         """ width getter """
         return self.__y
 
     @y.setter
     def y(self, value):
+         """ width getter """
         self.validate_integer(value, "y")
         self.validate_non_negative(value, "y")
         self.__y = value
