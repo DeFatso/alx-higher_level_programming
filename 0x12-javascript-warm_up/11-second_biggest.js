@@ -9,6 +9,6 @@ if (index < 2) {
   args.sort(function (a, b) {
     return a - b;
   });
-  const second = args[1];
+  const second = args[index - 2];
   console.log(second);
 }
