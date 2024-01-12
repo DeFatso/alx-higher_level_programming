@@ -6,7 +6,6 @@ if __name__ == "__main__":
     """getting command line arguments"""
     username, password, database = sys.argv[1], sys.argv[2], sys.argv[3]
 
-
     """connecting to MySQL server"""
     db = MySQLdb.connect(
             host="localhost",
@@ -22,7 +21,6 @@ if __name__ == "__main__":
     """executing the query"""
     query = "SELECT * FROM states ORDER BY id"
     cursor.execute(query)
-
 
     """get all rows"""
     rows = cursor.fetchall()
