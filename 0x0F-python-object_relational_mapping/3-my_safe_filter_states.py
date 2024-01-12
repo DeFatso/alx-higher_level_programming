@@ -5,8 +5,7 @@ import sys
 
 if __name__ == "__main__":
     """getting command line arguments"""
-    username, password, database, = sys.argv[1], sys.argv[2], sys.argv[3]
-    state = sys.argv[4]
+    username, password, database, state = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
 
     """ connecting to mysql server"""
     db = MySQLdb.connect(
@@ -22,7 +21,7 @@ if __name__ == "__main__":
 
     """executing query"""
     query = "SELECT * FROM states WHERE name = %s ORDER BY id"
-    cursor.execute(query, (state))
+    cursor.execute(query, (state,))
 
     """ print """
     row = cursor.fetchone()
@@ -33,4 +32,4 @@ if __name__ == "__main__":
 
     """free"""
     cursor.close()
-    db.close()#!/usr/bin/python3
+    db.close()

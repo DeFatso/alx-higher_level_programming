@@ -20,8 +20,8 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     """executing query"""
-    query = "SELECT * FROM states WHERE name LIKE BINARY '{}'".format(argv[4])
-    cursor.execute(query, (state))
+    query = "SELECT * FROM states WHERE name LIKE BINARY '{}'".format(sys.argv[4])
+    cursor.execute(query)
 
     """ print """
     row = cursor.fetchone()

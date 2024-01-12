@@ -20,7 +20,7 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     """executing query"""
-    query = "SELECT * FROM states WHERE name LIKE 'N%'"
+    query = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id"
     cursor.execute(query)
 
     """ print """
