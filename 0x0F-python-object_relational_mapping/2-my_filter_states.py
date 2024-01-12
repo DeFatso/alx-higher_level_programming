@@ -6,7 +6,6 @@ import sys
 if __name__ == "__main__":
     """getting command line arguments"""
     username, password, database, = sys.argv[1], sys.argv[2], sys.argv[3]
-    state = sys.argv[4]
 
     """ connecting to mysql server"""
     db = MySQLdb.connect(
@@ -21,7 +20,7 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     """executing query"""
-    query = "SELECT * FROM states WHERE name = %s ORDER BY id"
+    query = "SELECT * FROM states WHERE name LIKE BINARY '{}'".format(argv[4])
     cursor.execute(query, (state))
 
     """ print """
