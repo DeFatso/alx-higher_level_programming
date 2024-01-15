@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""file that contains the class definition of a State"""
+"""
+file that contains the class definition of a State
+"""
 
 import sys
 from sqlalchemy import Column, Integer, String
@@ -11,7 +13,11 @@ Base = declarative_base()
 
 
 class State(Base):
-    """inherits from Base"""
+    """
+    inherits from Base
+    Attributes:
+        id: Id state
+    """
 
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
