@@ -2,7 +2,6 @@
 """
 file that contains the class definition of a State
 """
-
 import sys
 from sqlalchemy import Column, Integer, String
 from sqlalchemy import create_engine
@@ -25,9 +24,10 @@ class State(Base):
 
     cities = relationship("City", back_populates="state")
 
-
+"""Get command line arguments"""
 username, password, database = sys.argv[1], sys.argv[2], sys.argv[3]
 
+"""Connect to MySQL server"""
 engine = create_engine('mysql://{}:{}@localhost:3306/{}'.
                        format(username, password, database),
                        pool_pre_ping=True)
