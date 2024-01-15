@@ -5,7 +5,6 @@ This module defines the State class for representing states in a database.
 
 import sys
 from sqlalchemy import Column, Integer, String
-from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 
@@ -27,6 +26,3 @@ class State(Base):
     name = Column(String(128), nullable=False)
 
     cities = relationship("City", back_populates="state")
-
-
-Base.metadata.create_all(engine)
